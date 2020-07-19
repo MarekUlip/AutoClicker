@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoClicker"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="AutoClicker.MainWindow"
+        mc:Ignorable="d"
+        Title="AutoClicker" Height="600" Width="800" FontSize="{DynamicResource LableTextSize}">
+    <Window.Resources>
+        <System:Double x:Key="LableTextSize">16</System:Double>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="79*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="textMinClickSpeed" HorizontalAlignment="Left" Height="31" Margin="51,113,0,0" TextWrapping="Wrap" Text="300" VerticalAlignment="Top" Width="175" FontSize="{DynamicResource LableTextSize}" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textMaxClickSpeed" HorizontalAlignment="Left" Height="31" Margin="320,113,0,0" TextWrapping="Wrap" Text="600" VerticalAlignment="Top" Width="175" Grid.Column="1"/>
+        <CheckBox x:Name="checkIsSimulateRealClick" Content="Simulate Real Click" HorizontalAlignment="Left" Margin="51,231,0,0" VerticalAlignment="Top" IsChecked="True" Grid.ColumnSpan="2"/>
+        <Label Content="Min:" HorizontalAlignment="Left" Margin="51,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.186,-1.485" Grid.ColumnSpan="2"/>
+        <Label Content="Max:" HorizontalAlignment="Left" Margin="320.164,78,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="AutoClicker" HorizontalAlignment="Left" Margin="51,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.186,-1.485" FontSize="24" Grid.ColumnSpan="2"/>
+        <Button x:Name="butKeyBinded" Content="Button" HorizontalAlignment="Left" Margin="368,233,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="BeginKeyBinding"/>
+        <Label Content="Key Bind:" HorizontalAlignment="Left" Margin="288,229,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Focus Window Name:" HorizontalAlignment="Left" Margin="51,149,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textFocusedWindowName" HorizontalAlignment="Left" Height="31" Margin="51,185,0,0" TextWrapping="Wrap" Text="AutoClicker" VerticalAlignment="Top" Width="175" FontSize="{DynamicResource LableTextSize}" Grid.ColumnSpan="2"/>
+        <Button Grid.ColumnSpan="2" Content="Save Settings" HorizontalAlignment="Left" Margin="51,389,0,0" VerticalAlignment="Top" Width="120" Click="SaveSettingsClick"/>
+        <Label Content="Click on button to change" Grid.Column="1" HorizontalAlignment="Left" Margin="288,263,0,0" VerticalAlignment="Top" FontSize="10"/>
+
+    </Grid>
+</Window>
